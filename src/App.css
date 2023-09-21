@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* отображаем курсор в виде руки при наведении; некоторые
+  считают, что необходимо оставлять стрелочный вид для кнопок */
+  cursor: pointer;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +46,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* my styles */
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+@media screen and (width < 1200px) {
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (width < 800px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-item {
+  background-color: black;
+  width: 300px;
+  height: 300px;
 }
